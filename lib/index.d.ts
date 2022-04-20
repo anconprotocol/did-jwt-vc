@@ -1,0 +1,13 @@
+import { Resolvable } from 'did-resolver';
+import { JwtCredentialPayload, Issuer, JwtPresentationPayload, JWT, VerifiablePresentation, VerifiableCredential, CredentialPayload, PresentationPayload, Verifiable, W3CCredential, W3CPresentation, VerifiedCredential, VerifiedPresentation, VerifyPresentationOptions, CreatePresentationOptions, CreateCredentialOptions, VerifyCredentialOptions } from './types';
+import { transformCredentialInput, transformPresentationInput, normalizeCredential, normalizePresentation } from './converters';
+export { Issuer, CredentialPayload, PresentationPayload, JwtCredentialPayload, JwtPresentationPayload, VerifiableCredential, VerifiablePresentation, VerifiedCredential, VerifiedPresentation, Verifiable, W3CCredential, W3CPresentation, transformCredentialInput, transformPresentationInput, normalizeCredential, normalizePresentation, };
+export declare function createVerifiableCredentialJwt(payload: JwtCredentialPayload | CredentialPayload, issuer: Issuer, options?: CreateCredentialOptions): Promise<JWT>;
+export declare function createVerifiablePresentationJwt(payload: JwtPresentationPayload | PresentationPayload, holder: Issuer, options?: CreatePresentationOptions): Promise<JWT>;
+export declare function validateJwtCredentialPayload(payload: JwtCredentialPayload): void;
+export declare function validateCredentialPayload(payload: CredentialPayload): void;
+export declare function validateJwtPresentationPayload(payload: JwtPresentationPayload): void;
+export declare function validatePresentationPayload(payload: PresentationPayload): void;
+export declare function verifyCredential(vc: JWT, resolver: Resolvable, options?: VerifyCredentialOptions): Promise<VerifiedCredential>;
+export declare function verifyPresentationPayloadOptions(payload: JwtPresentationPayload, options: VerifyPresentationOptions): void;
+export declare function verifyPresentation(presentation: JWT, resolver: Resolvable, options?: VerifyPresentationOptions): Promise<VerifiedPresentation>;
