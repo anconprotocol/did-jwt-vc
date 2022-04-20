@@ -1,4 +1,4 @@
-import { createJWT, verifyJWT } from 'did-jwt'
+
 import { Resolvable } from 'did-resolver'
 import * as validators from './validators'
 import {
@@ -47,7 +47,7 @@ export {
   normalizeCredential,
   normalizePresentation,
 }
-
+import { createJWT, verifyJWT } from 'did-jwt'
 /**
  * Creates a VerifiableCredential given a `CredentialPayload` or `JwtCredentialPayload` and an `Issuer`.
  *
