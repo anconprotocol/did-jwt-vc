@@ -47,7 +47,7 @@ export {
   normalizeCredential,
   normalizePresentation,
 }
-import { createJWT, verifyJWT } from 'did-jwt'
+import { createJWT, verifyJWT } from 'did-jwt/src'
 /**
  * Creates a VerifiableCredential given a `CredentialPayload` or `JwtCredentialPayload` and an `Issuer`.
  *

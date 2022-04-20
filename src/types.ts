@@ -1,4 +1,4 @@
-import { Signer, JWTVerified, JWTHeader, JWTOptions } from 'did-jwt'
+import { Signer, JWTVerified, JWTHeader, JWTOptions } from 'did-jwt/src'
 
 export const JWT_ALG = 'ES256K'
 export const DID_FORMAT = /^did:([a-zA-Z0-9_]+):([:[a-zA-Z0-9_.-]+)(\/[^#]*)?(#.*)?$/

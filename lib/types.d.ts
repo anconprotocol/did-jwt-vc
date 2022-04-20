@@ -1,4 +1,4 @@
-import { Signer, JWTVerified, JWTHeader, JWTOptions } from 'did-jwt';
+import { Signer, JWTVerified, JWTHeader, JWTOptions } from 'did-jwt/src';
 export declare const JWT_ALG = "ES256K";
 export declare const DID_FORMAT: RegExp;
 export declare const JWT_FORMAT: RegExp;
